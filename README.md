@@ -25,3 +25,5 @@ Este proyecto implementa un sistema de recomendación de películas utilizando t
 correr el archivo app.py con las documentacion y archivos user e item lo cual los mandara a una pagina web local en el cual pueden colocar cualquier nombre de usuario y en automatico se les recomendara 5 peliculas de acurdo a sus gustos similares con otros clientes .
 
 Se encuentra en version base.
+
+el archivo evaluate model es el que genera los archivos user e items para que puedan ser importadas a app.py 
