@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Recomendador de Películas</title>
+</head>
+<body>
+    <h1>Recomendador de Películas</h1>
+    <form method="post">
+        <label for="user_id">Ingrese su ID de usuario:</label>
+        <input type="number" name="user_id" required>
+        <button type="submit">Obtener Recomendaciones</button>
+    </form>
+    
+    {% if actual_movies %}
+        <h2>Películas vistas por el usuario:</h2>
+        <ul>
+            {% for movie in actual_movies %}
+                <li>{{ movie }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>El usuario no ha visto ninguna película.</p>
+    {% endif %}
+    
+    {% if recommendations %}
+        <h2>Recomendaciones:</h2>
+        <ul>
+            {% for movie in recommendations %}
+                <li>{{ movie }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hay recomendaciones disponibles.</p>
+    {% endif %}
+    
+    {% if precision is not none %}
+        <h3>Precisión: {{ precision }}</h3>
+    {% endif %}
+</body>
+</html>
