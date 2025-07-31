@@ -15,8 +15,7 @@ Este proyecto implementa un sistema de recomendación de películas utilizando t
 ## Requisitos
 
 - Python
-- TensorFlow
-- Keras
+- Sklearn
 - Pandas
 - Numpy
 
